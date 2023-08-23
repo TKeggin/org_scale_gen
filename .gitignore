@@ -1,6 +1,3 @@
-# html files
-*.html
-
 # heavy data files
 /data_processed
 /data_external
