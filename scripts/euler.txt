@@ -1,0 +1,22 @@
+# inputs
+rsync -vrzh --progress ./* keggint@euler.ethz.ch:/cluster/scratch/keggint/genesis/seascapes/distances_full/
+
+# configs
+tar -czvf configs.tar.gz ./configs
+scp /mnt/c/Users/thoma/OneDrive/Documents/PhD/chapter_1/org_scale_gen/data_processed/configs.tar.gz keggint@euler.ethz.ch://cluster/home/keggint/chapter_1/scripts/configs/
+
+# batch script
+scp /mnt/c/Users/thoma/OneDrive/Documents/PhD/chapter_1/org_scale_gen/data_processed/configs/submit_sims.sh keggint@euler.ethz.ch://cluster/home/keggint/chapter_1/scripts/
+
+# run gen3sis script
+scp /mnt/c/Users/thoma/OneDrive/Documents/PhD/chapter_1/org_scale_gen/scripts/03_run_genesis/*.R keggint@euler.ethz.ch://cluster/home/keggint/chapter_1/scripts/
+
+# zip file
+tar -czvf output.tar.gz ./output
+
+# copy log files back to local
+scp -r keggint@euler.ethz.ch://cluster/home/keggint/chapter_1/scripts/slurm* /mnt/c/Users/thoma/OneDrive/Documents/PhD/chapter_1/org_scale_gen/data_processed/genesis_output/logs/6001-15000/
+
+# copy output files back to local
+scp keggint@euler.ethz.ch://cluster/work/ele/keggint/output.tar.gz /mnt/c/Users/thoma/OneDrive/Documents/PhD/chapter_1/org_scale_gen/data_processed/genesis_output/
+
