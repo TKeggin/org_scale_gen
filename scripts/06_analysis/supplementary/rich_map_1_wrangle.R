@@ -5,7 +5,7 @@ land_all <- readRDS("./data_processed/seascapes/landscapes.rds")
 coords <- land_all$depth[,c(1:2)]
 
 # load real data
-load("./data_external/albouy_2019/MatPa_Final_ok.rdata") # load gaspar richness data
+load("./data_external/species_distributions/MatPa_Final_ok.rdata") # load gaspar richness data
 MatPa_Final_ok$richness <- rowSums(MatPa_Final_ok[,-c(1,2)])
 
 MatPa_Final_ok <- MatPa_Final_ok[,c("Longitude","Latitude","richness")]

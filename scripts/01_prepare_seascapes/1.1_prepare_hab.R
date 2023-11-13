@@ -44,13 +44,13 @@ glacial.scale <- function(input,step,factor){
 }
 
 # 01. TEMP load in all koeppen raster files ------------------------------------
-koeppenNames <- list.files("./data_external/seascapes/raw_koeppen_temperature_200-0Ma/", pattern = "*.asc")     # names of all the data files
+koeppenNames <- list.files("./data_external/seascapes/temperature/", pattern = "*.asc")     # names of all the data files
 
 koeppenList <- c()                                # set a blank list in which to put the imported data files
 
 for(i in koeppenNames){                           # import all the data files and store them in dataList
   
-  koeppen <- raster(paste("data_external/seascapes/raw_koeppen_temperature_200-0Ma/",i, sep = ""))
+  koeppen <- raster(paste("data_external/seascapes/temperature/",i, sep = ""))
   koeppenList <- c(koeppenList,koeppen)
   
 }
@@ -113,13 +113,13 @@ geoTempList   <- calc(koeppenStack,
 # 05. TEMP find the delta temp from present for each geo time step -------------
 # this could be done before 04. ----
 # import data from Scotese 2021 supplementary
-deltaTemp.df   <- read_excel("./data_external/seascapes/scotese_2021_temp/1-s2.0-S0012825221000027-mmc1/tk_extract.xlsx",
-                             sheet = 3)
+deltaTemp.df   <- read_excel("./data_external/seascapes/temperature/scotese_2021_temp/1-s2.0-S0012825221000027-mmc1/Part 4. Phanerozoic_Paleotemperature_Summaryv4.xlsx",
+                             sheet = 2)
 
 # categorise geo timesteps into koeppen timestep bins
 geoTimes     <- seq(0, geoPeriod, timeInterval)   # sequence of times in ka from present
 geoTimesteps <- seq(1,length(geoTimes))           # serial id for timesteps
-deltaTemp    <- deltaTemp.df$deltaT      # vector of delta temp data at 1 million year intervals
+deltaTemp    <- deltaTemp.df$Tropical      # vector of delta temp data at 1 million year intervals
 
 geoDeltaTemp <- approx(seq(from=0, to=geoPeriod),
                        deltaTemp[1:(geoPeriod+1)],
