@@ -1,10 +1,13 @@
 > This repository contains all the code for the first chapter of my PhD and the associated publication (main text pasted below minus equations and figures) in BMC Biology. Enjoy!
-
+>
 > Thesis:
 > [https://doi.org/10.3929/ethz-b-000620696](https://doi.org/10.3929/ethz-b-000620696)
-
+>
 > Paper (open access):
 > [https://doi.org/10.1186/s12915-023-01771-3](https://doi.org/10.1186/s12915-023-01771-3)
+>
+> Data Repository:
+> https://figshare.com/articles/dataset/Data/24548971
 
 # Diversity across organisational scale emerges through dispersal ability and speciation dynamics in tropical fish
 
