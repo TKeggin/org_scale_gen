@@ -219,23 +219,23 @@ Table 2: Summary of simulation parameters
 
 Table 3: Summary of metrics
 
-| ***Level\***                    | ***Metric\***                                                | ***Description\***                                           |
-| ------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| *Species*                       | Surviving  species                                           | The  total number of extant species within a simulation.     |
-| Species  phylogenetic diversity | The total branch  length in the phylogeny object, calculated using the phylomeasures R package (89, 92). |                                                              |
-| Species  mean pairwise distance | The  mean pairwise distance between extant species in the phylogeny object,  calculated using the phylomeasures package (83, 89). |                                                              |
-| Total species                   | The total  number of extinct and extant species within a simulation. |                                                              |
-| Species  range                  | The  mean number of occupied cells for all extant species.   |                                                              |
-| Species  turnover               | The number of  extant species over the sum of extant and extinct species. |                                                              |
-| Species  richness               | The  mean simulation species richness per cell.              |                                                              |
-|                                 | Diversification  rate                                        | Calculated  from the simulation phylogeny as the reciprocal of the evolutionary  distinctiveness (86). Evolutionary distinctiveness was calculated  using the evol_distinct() function in the phyloregion R package (93) following the fair proportions framework  described by (85). |
-|                                 | Weighted  endemism                                           | Weighted  endemism for each cell was calculated as the number of species occupying that  cell divided by the total ranges of those occupying species (82). From this, the  mean was taken. |
-| *Population*                    | Total clusters                                               | The total  number of extant clusters of adjacent inhabited cells within all species in  the simulation. |
-| Cluster  phylogenetic diversity | Faith’s  phylogenetic diversity (92) calculated from  population the population phylogeny. |                                                              |
-| Cluster mean  pairwise distance | The mean pairwise distance between populations in the population  phylogeny. |                                                              |
-| *Both*                          | Continuity                                                   | The  log-value of species diversity divided by the population diversity. |
-| Thermal traits                  | The mean,  maximum, minimum, and range, evenness (87), and  diversity (43). |                                                              |
-| Competitive  niche              | The  mean, maximum, minimum, and range, evenness (87), and  diversity (43). |                                                              |
+| ***Level\*** | ***Metric\***                   | ***Description\***                                           |
+| :----------- | ------------------------------- | ------------------------------------------------------------ |
+| *Species*    | Surviving  species              | The  total number of extant species within a simulation.     |
+|              | Species  phylogenetic diversity | The total branch  length in the phylogeny object, calculated using the phylomeasures R package (89, 92). |
+|              | Species  mean pairwise distance | The  mean pairwise distance between extant species in the phylogeny object,  calculated using the phylomeasures package (83, 89). |
+|              | Total species                   | The total  number of extinct and extant species within a simulation. |
+|              | Species  range                  | The  mean number of occupied cells for all extant species.   |
+|              | Species  turnover               | The number of  extant species over the sum of extant and extinct species. |
+|              | Species  richness               | The  mean simulation species richness per cell.              |
+|              | Diversification  rate           | Calculated  from the simulation phylogeny as the reciprocal of the evolutionary  distinctiveness (86). Evolutionary distinctiveness was calculated  using the evol_distinct() function in the phyloregion R package (93) following the fair proportions framework  described by (85). |
+|              | Weighted  endemism              | Weighted  endemism for each cell was calculated as the number of species occupying that  cell divided by the total ranges of those occupying species (82). From this, the  mean was taken. |
+| *Population* | Total clusters                  | The total  number of extant clusters of adjacent inhabited cells within all species in  the simulation. |
+|              | Cluster  phylogenetic diversity | Faith’s  phylogenetic diversity (92) calculated from  population the population phylogeny. |
+|              | Cluster mean  pairwise distance | The mean pairwise distance between populations in the population  phylogeny. |
+| *Both*       | Continuity                      | The  log-value of species diversity divided by the population diversity. |
+|              | Thermal traits                  | The mean,  maximum, minimum, and range, evenness (87), and  diversity (43). |
+|              | Competitive  niche              | The  mean, maximum, minimum, and range, evenness (87), and  diversity (43). |
 
 
 
